@@ -1,0 +1,12 @@
+<h1>Movie</h1>
+<h2><%= @movie.title %></h2>
+
+<h3>Rating</h3>
+<p><%= @movie.rating %></p>
+<h2>Description</h2>
+<p><%= @movie.description %></p>
+
+
+<%= link_to "<< Back", :back %>
+<%= link_to "Edit", edit_movie_path %>
+<%= link_to "Home", movies_path %>

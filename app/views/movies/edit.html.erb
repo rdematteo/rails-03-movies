@@ -1,0 +1,36 @@
+<h1>Edit Movie</h1>
+
+<form action="<%= movie_path(params[:id]) %>" method="POST" >
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+    <input type="hidden" name="_method" value="patch" />
+
+    <label>Title</label>
+    <input type="text" name="title" value="<%= @movie.title %>"  />
+
+    <label>Description</label>
+    <input type="textarea" name="description"  value="<%= @movie.description %>"  />
+
+    <label>Rating</label>
+    <input type="number" name="rating" min="1" max="10" value="<%= @movie.rating %>"  />
+
+    <input type="submit" value="Update" />
+
+    <input type="color" name="color" id="red">
+</form>
+
+<%= link_to "Home", movies_path %>
+
+
+<form>
+<input type="color" name="color" id="red" value="color">
+<input type="email" name="email" id="email" value="email">
+<input type="tel" name="tel" id="" value="tel">
+<input type="datetime-local" name="" id="" value="dob">
+<input type="file" name="" id="">
+<input type="button" value="<< Back" >
+
+
+
+
+</form>
