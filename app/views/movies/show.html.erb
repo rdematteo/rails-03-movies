@@ -1,12 +1,14 @@
-<h1>Movie</h1>
+
+<h1>Movie Title</h1>
 <h2><%= @movie.title %></h2>
 
-<h3>Rating</h3>
-<p><%= @movie.rating %></p>
+<h3>Rating:  <span><%= @movie.rating %></span>         </h3>
+
 <h2>Description</h2>
-<p><%= @movie.description %></p>
+<p class="movie"><%= @movie.description %></p>
 
-
-<%= link_to "<< Back", :back %>
-<%= link_to "Edit", edit_movie_path %>
-<%= link_to "Home", movies_path %>
+<div class="container">
+<%= link_to "<< Back", :back, class: "btn btn-default" %>
+<%= link_to "Edit Movie", edit_movie_path, class: "btn btn-default" %>
+<%= link_to "Home", movies_path, class: "btn btn-default" %>
+</div>

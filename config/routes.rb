@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   patch "/movies/:id", to: "movies#update"
   get "/movies/:id/edit", to: "movies#edit", as: "edit_movie"
 
-
+  delete '/movies/:id', to: "movies#destroy", as: "delete_movie"
 
   root 'movies#index'
 end

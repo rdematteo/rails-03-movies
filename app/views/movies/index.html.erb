@@ -1,13 +1,18 @@
-<h1>Movies</h1>
+<h1>Movie List</h1>
 
 <ul>
   <% @movies.each_with_index do |movie, index| %>
   <li>
-    Title: <%= movie.title %> - Rating: <%= movie.rating %> <%= link_to "Show",
-    movie_path(movie.id) %><%= link_to "  Edit", edit_movie_path(movie.id) %>
+    <p>Movie Title: <span><%= movie.title %></span></p>
+    <p>Movie Rating: <span><%= movie.rating %></span> </p>
+    <p><%= link_to "Show", movie_path(movie.id), class: "btn btn-default" %>
+    <%= link_to "  Edit", edit_movie_path(movie.id), class: "btn btn-default" %>
+    <%= link_to 'Destroy', movie_path(movie.id), class: "btn btn-default",
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %></p>
   </li>
 
   <% end %>
 </ul>
 
-<%= link_to "Create", new_movie_path %>
+<%= link_to "Create a new movie", new_movie_path, class: "btn1 btn-default" %>
